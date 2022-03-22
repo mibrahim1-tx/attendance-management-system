@@ -1,0 +1,71 @@
+[class*=button-] {
+	min-height: 38px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 22px;
+	font-size: 14px;
+	border: none;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all .2s;
+	font-family: 'titillium';
+  &.button-sm {
+    min-height: 32px;
+    &.square {
+      width: 32px;
+      padding: 0;
+    }
+  }
+  &.button-primary {
+    background-color: var(--blue);
+    color: var(--white);
+    &:hover {
+      background-color: var(--primary);
+    }
+    &-outline {
+      background-color: transparent;
+      border: 1px solid var(--blue);
+      color: var(--blue);
+      &:hover {
+        background-color: var(--blue-light);
+      }
+    }
+    &:disabled {
+      background-color: var(--secondary);
+      color: var(--grey-base);
+      font-weight: 700;
+      cursor: not-allowed;
+    }
+  }
+  
+  &.button-danger {
+    background-color: var(--bs-red);
+    color: var(--white);
+    &:hover {
+      background-color: var(--danger);
+    }
+  }
+  &.button-secondary {
+    background-color: var(--grey-base);
+    color: var(--white);
+    &:hover {
+      background-color: var(--secondary);
+    }
+  }
+  &.button-dark {
+    background-color: var(--dark-black);
+    color: var(--white);
+    &:hover {
+      background-color: var(--dark);
+    }
+  }
+  &.button-white {
+    background-color: var(--white);
+    color: var(--primary);
+    &:hover {
+      box-shadow: 0 0 10px 0 rgba(82, 80, 80,  0.2);
+    }
+  }
+}

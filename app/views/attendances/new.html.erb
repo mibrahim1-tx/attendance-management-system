@@ -1,0 +1,24 @@
+
+<div class="app-wrapper">
+
+  <div class="app-content pt-3 p-md-3 p-lg-4">
+    <div class="container-xl">
+
+      <h1 class="app-page-title">Mark Attendance</h1>
+        <%= form_with model: @attendance do |form| %>
+        <div class="mb-3">
+      <%= form.label :check_in_time %>
+        <%= form.datetime_field :check_in_time, class: "form-control" %>
+        <%= form.label :check_out_time %>
+        <%= form.datetime_field :check_out_time, class: "form-control" %>
+        <%= form.label :sub_type %>
+          <%= form.select(:sub_type, @sub_types.map {|u| [u.first, u.second]}, :prompt => 'Select') %>
+        <%= form.submit "Create Attendance", class: "btn btn-primary" %>
+      <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+

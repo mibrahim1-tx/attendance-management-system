@@ -1,0 +1,59 @@
+<div class="app-wrapper">
+  <div class="app-content p-0">
+    <div class="container">
+      <div class="chat-box">
+        <div class="threads">
+          <div class="chat-header mr-top">
+            <div class="row">
+              <div class="col-md-">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  Start Chat
+                </button>
+              </div>
+            </div>
+          </div>
+          <%= render :partial => "conversations_list", :locals => { conversations: @conversations } %>
+        </div>
+        <%= render :partial => "conversation", :locals => { conversation: @conversation } if @conversation.present? %>
+      </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" style="max-width: 50%">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <%= form_tag conversations_path, method: :post do %>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <%= select_tag 'user_id', options_for_select(@users.collect { |u| [u.full_name, u.id] }), class: 'form-control' %>
+                </div>
+                <div class="col-md-6"></div>
+              </div>
+              <div class="row">
+                <div class="form-group">
+                  <label for="message_body">Conversation Name</label>
+                  <input type="text" class="form-control" name="conversation_name" id="conversation_name"/>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group">
+                  <label for="message_body">Message Body</label>
+                  <textarea class="form-control" name="message_text" id="message_body" rows="5" style="height: 130px"></textarea>
+                </div>
+                create.html.erb
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,74 @@
+
+
+	<div class="app app-signup p-0">
+		<div class="row g-0 app-auth-wrapper">
+			<div class="col-12 col-md-7 col-lg-6 auth-main-col text-center p-5">
+				<div class="d-flex flex-column align-content-end">
+					<div class="app-auth-body mx-auto">
+						<%= image_tag "app-logo.svg", class: "logo-icon me-2" %>
+						<h2 class="auth-heading text-center mb-4">Sign up to Portal</h2>
+						<div class="auth-form-container text-start mx-auto">
+								<%= form_for(resource, as: resource_name, url: user_registration_path(resource), html: { class: 'auth-form auth-signup-form' }) do |f| %>
+									<%= render "devise/shared/error_messages", resource: resource %>
+								<div class="mb-3">
+									<%= f.label :first_name %>
+									<%= f.text_field :first_name, autofocus: true, class: 'form-control' %>
+								</div>
+								<div class="first_name mb-3">
+									<%= f.label :last_name %>
+									<%= f.text_field :last_name, autofocus: true, class: 'form-control' %>
+								</div>
+								<div class="last_name mb-3">
+									<%= f.label :email %>
+									<%= f.text_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+								</div>
+								<div class="date_of_birth mb-3">
+									<%= f.label :date_of_birth %>
+									<%= f.date_field :date_of_birth, autofocus: true, class: 'form-control' %>
+								</div>
+								<div class="company_name mb-3">
+									<%= f.label :company_name %>
+									<%= f.text_field :company_name, autofocus: true, class: 'form-control' %>
+								</div>
+								<div class="phone_number mb-3">
+									<%= f.label :phone_number %>
+									<%= f.phone_field :phone_number, autofocus: true, class: 'form-control' %>
+								</div>
+								<div class="password mb-3">
+									<% if @minimum_password_length %>
+										<em>(<%= @minimum_password_length %> characters minimum)</em>
+									<% end %><br />
+									<%= f.label :password %>
+									<%= f.password_field :password, autofocus: true, class: 'form-control' %>
+								</div>
+								<div class="password_confirmation mb-3">
+									<%= f.label :password_confirmation %>
+									<%= f.password_field :password_confirmation, autofocus: true, class: 'form-control' %>
+								</div>
+								<div class="text-center">
+									<%= f.submit "Sign up", class: "btn app-btn-primary w-100 theme-btn mx-auto" %>
+								</div>
+							<% end %>
+							<%= link_to "Already have an account? Log in", user_session_path, method: :post, class: 'auth-option text-center pt-5'%>
+
+						</div><!--//auth-form-container-->
+
+
+
+
+
+					</div><!--//auth-body-->
+				</div><!--//flex-column-->
+			</div><!--//auth-main-col-->
+			<div class="col-12 col-md-5 col-lg-6 h-100 auth-background-col">
+				<div class="auth-background-holder">
+				</div>
+				<div class="auth-background-mask"></div>
+				<div class="auth-background-overlay p-3 p-lg-5">
+					<div class="d-flex flex-column align-content-end h-100">
+						<div class="h-100"></div>
+					</div>
+				</div><!--//auth-background-overlay-->
+			</div><!--//auth-background-col-->
+		</div><!--//row-->
+	</div>

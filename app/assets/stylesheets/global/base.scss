@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+:root {
+  --dark: #212121;
+  --dark-black: #090f19;
+  --light-black: #121212;
+  --soft-black: #303030;
+  --primary: #4f46e5;
+  --primary-light1: #90acd3;
+  --secondary: #bfc3cb;
+  --grey-base: #a3a3a3;
+  --blue: #2563ec;
+  --blue-light: rgba(37, 100, 236, 0.1);
+  --white: #ffffff;
+  
+  --bs-red: #dc3545;
+  --danger: #b41020;
+  --base-bg: #F9F9F9;
+  
+  --clr-white: rgb(255, 255, 255);
+  --clr-black: rgb(0, 0, 0);
+  --clr-light: rgb(245, 248, 255);
+  --clr-light-gray: rgb(196, 195, 196);
+  --clr-blue: rgb(63, 134, 255);
+  --clr-light-blue: rgb(171, 202, 255);
+  
+  --navbar-height: 70px;
+  scroll-padding-top: var(--navbar-height);
+  scroll-behavior: smooth;
+}
+
+article,
+aside,
+audio,
+canvas,
+command,
+datalist,
+details,
+embed,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+keygen,
+meter,
+nav,
+output,
+progress,
+section,
+source,
+video {
+  display: block;
+}
+
+mark,
+rp,
+rt,
+ruby,
+summary,
+time {
+  display: inline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  margin: 0;
+  font-weight: normal;
+  line-height: 1.1;
+}
+
+ul,
+p,
+figure,
+label {
+  margin-bottom: 0;
+}
+
+strong {
+  font-weight: 500;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none !important;
+  outline: 0 !important;
+}
+
+a:focus {
+  text-decoration: none !important;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+
+html,
+body {
+  font-family: 'titillium';
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--dark-black);
+  background: var(--white);
+}

@@ -1,0 +1,17 @@
+<input type='hidden' id="current_chat" value="<%= @conversation.id if @conversation.present? %>">
+<input type='hidden' id="user_current_id" value="<%= current_user.id if current_user.present? %>">
+<ul>
+  <% if @conversations.present? %>
+    <% @conversations.each do |conversation| %>
+      <li>
+        <%= link_to conversations_path(conversation_id: conversation.id), class: "#{"active"  if conversation.id == @conversation.id} "  do %>a
+                <%= conversation.name %>
+            <div class="col">
+              <small><%= conversation.updated_at.strftime("%b %d %Y") %></small>
+              <p class="message <%= "fw-bolder" %>" <%= conversation.try(:body) %></p>
+            </div>
+        <% end %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>

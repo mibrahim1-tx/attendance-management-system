@@ -1,0 +1,42 @@
+
+<div class="messages-box">
+  <div class="messages <%= "messages_#{@conversation.id}" %>">
+    <div class="user-info">
+      <%= link_to conversations_path(conversation, "") do %>
+        <p class="name container"><%= @conversation.name %></p>
+      <% end %>
+    </div>
+
+    <p class="timeline">Today</p>
+    <% if @conversation.messages.present? %>
+          <ul class="container" id="msg-list">
+            <% @conversation.messages.each do |message| %>
+              <li>
+                <div class="message-block">
+                  <div class="d-flex flex-column gap-2">
+                    <div>
+                      <strong><%=  message.user.first_name %></strong>
+                      <span class="float-end"><%= message.try(:created_at).strftime("%I:%M %p") %></span>
+                    </div>
+                    <p><%= message.try(:body) %></p>
+                  </div>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+    <% end %>
+
+
+  </div>
+  <%= form_with(model: Message.new, id: "message_send", remote: true) do |f| %>
+    <div class="message-input">
+      <div class="controls">
+        <textarea class="form-control" rows="5" name="message[body]" id="message_body" rows=3 placeholder="Type your message here..."></textarea>
+        <input type="hidden" name="message[user_id]" id="message_user" value="<%= current_user.try(:id) %>">
+        <input type="hidden" name="message[conversation_id]" id="message_conversation" value="<%= @conversation.try(:id) %>">
+      </div>
+    </div>
+  <% end %>
+</div>
+
+

@@ -1,0 +1,145 @@
+.page-wrapper {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 170px);
+}
+
+.card {
+  width: 32%;
+  padding: 20px 30px;
+  border: none;
+  box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.06);
+}
+
+.action-header {
+  background-color: var(--bs-dark);
+  margin-top: 30px;
+  padding: 30px 0;
+
+  .company-logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-color: var(--base-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 70px;
+      height: 70px;
+      border-radius: 100%;
+      object-fit: cover;
+    }
+
+    .initials {
+      color: var(--dark-black);
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  .name {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--white);
+    line-height: 30px;
+  }
+
+  .location,
+  .email,
+  .website,
+  .phone {
+    font-size: 14px;
+    color: var(--primary-light1);
+    font-weight: 600;
+    line-height: 20px;
+
+    i {
+      font-size: 12px;
+    }
+  }
+
+  .email {
+    color: var(--white);
+  }
+}
+
+.dropdown {
+  
+  &.open-on-hover {
+    &:hover {
+      .dropdown-menu {
+        display: block;
+      }
+    }
+  }
+  
+  .dropdown-toggle {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    &::after {
+      border: none;
+    }
+  }
+
+  .dropdown-menu {
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 2px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.06);
+    padding: 0;
+
+    &.animate-scale {
+      -webkit-transition: all .2s linear;
+      -o-transition: all .2s linear;
+      transition: all .2s linear;
+      display: block !important;
+      transform: scale(0);
+
+      &.show {
+        transform: scale(1);
+      }
+    }
+
+    &.arrow {
+      &::after {
+        content: "\e90f";
+        color: var(--white);
+        font-family: 'shiporacle' !important;
+        speak: never;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 10px;
+        font-weight: bold;
+        margin-top: 1px;
+      }
+
+      &.show {
+        &::after {
+          content: "\e90c";
+          color: var(--dark-black);
+        }
+      }
+    }
+
+    .dropdown-item {
+      padding: 8px 12px;
+
+      &:hover {
+        background-color: var(--blue-light);
+      }
+    }
+  }
+}

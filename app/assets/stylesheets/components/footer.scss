@@ -1,0 +1,37 @@
+footer {
+	padding-top: 50px;
+	padding-bottom: 20px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background-color: var(--white);
+	.links {
+		list-style: none;
+		margin: auto;
+		li {
+			a {
+				color: var(--grey-base);
+				font-size: 14px;
+				font-weight: 600;
+				&:hover {
+					color: var(--primary);
+				}
+			}
+		}
+	}
+	.links.social {
+		li {
+			a {
+				font-size: 20px;
+			}
+		}
+	}
+	.copyright {
+		font-size: 12px;
+		font-weight: 600;
+		color: var(--grey-base);
+		text-align: center;
+		letter-spacing: 0.3px;
+		padding-left: 25px;
+	}
+}

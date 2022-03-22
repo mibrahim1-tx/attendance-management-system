@@ -1,0 +1,30 @@
+
+<div class="app-wrapper">
+
+  <div class="app-content pt-3 p-md-3 p-lg-4">
+    <div class="container-xl">
+
+      <h1 class="app-page-title">Request Leave</h1>
+      <%= form_with scope: (Attendance.new), url: mark_absent_path,  method: :post do |form| %>
+        <div class="mb-3">
+          <%= form.label :leave_on %>
+          <%= form.date_field :leave_on, class: "form-control" %>
+          <%= form.label :leave_duration %>
+          <%= form.date_field :leave_duration, class: "form-control" %>
+          <%= form.label :sub_type %>
+          <%= form.select(:sub_type, @user_roles.map {|u| [u.first, u.second]}, :prompt => 'Select') %>
+          <%= form.label :main_type %>
+          <%= form.select(:main_type, @sub_types.map {|u| [u.first, u.second]}, :prompt => 'Select') %>
+          <%= form.label :reason %>
+          <%= form.text_field :reason, class: "form-control" %>
+          <%= form.submit "Request Leave", class: "btn btn-primary"%>
+      <% end %>
+      </div>
+
+    </div><!--//container-fluid-->
+  </div><!--//app-content-->
+
+
+</div><!--//app-wrapper-->
+
+

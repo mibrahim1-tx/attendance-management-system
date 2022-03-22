@@ -1,0 +1,54 @@
+<div class="app-wrapper">
+  <%= link_to "Request Leave", mark_absent_path, class: "btn btn-primary" %>
+  <div class="app-content pt-3 p-md-3 p-lg-4">
+    <div class="container-xl">
+
+      <h1 class="app-page-title">Absent Employees</h1>
+      <div class="tab-content" id="orders-table-tab-content">
+        <div class="tab-pane fade show active" id="orders-all" role="tabpanel" aria-labelledby="orders-all-tab">
+          <div class="app-card app-card-orders-table shadow-sm mb-5">
+            <div class="app-card-body">
+              <div class="table-responsive">
+                <table class="table app-table-hover mb-0 text-left">
+                  <thead>
+                  <tr>
+                    <th class="cell">Email</th>
+                    <th class="cell">Leave on</th>
+                    <th class="cell">Reason</th>
+                    <th class="cell">Paid</th>
+                    <th class="cell">Leave Duration</th>
+                    <th class="cell">Main Type</th>
+                    <th class="cell">Sub Type</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <% @absent_users.each do |absent_user| %>
+
+                      <td class="cell"><%= absent_user.user.email %></td>
+                      <td class="cell"><span class="truncate"><%= absent_user.leave_on %></span></td>
+                      <td class="cell"><%= absent_user.reason %></td>
+                      <td class="cell"><%= absent_user.paid %></td>
+                      <td class="cell"><%= absent_user.leave_duration %></td>
+                      <td class="cell"><%= absent_user.main_type %></td>
+                      <td class="cell"><%= absent_user.sub_type %></td>
+                      </tr>
+                    <% end %>
+                    </tbody>
+                </table>
+              </div><!--//table-responsive-->
+
+            </div><!--//app-card-body-->
+          </div><!--//app-card-->
+
+        </div><!--//tab-pane-->
+
+
+      </div><!--//tab-content-->
+
+
+    </div><!--//container-fluid-->
+  </div><!--//app-content-->
+
+
+</div><!--//app-wrapper-->

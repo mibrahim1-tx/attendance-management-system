@@ -1,0 +1,165 @@
+/* https://fonts.google.com/specimen/Titillium+Web#standard-styles */
+@font-face {
+	font-family: 'titillium';
+	src: asset-url('TitilliumWeb-Bold.woff2') format('woff2'), 
+	asset-url('TitilliumWeb-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'titillium';
+	src: asset-url('TitilliumWeb-Black.woff2') format('woff2'), 
+	asset-url('TitilliumWeb-Black.woff') format('woff');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'titillium';
+	src: asset-url('TitilliumWeb-SemiBold.woff2') format('woff2'), 
+	asset-url('TitilliumWeb-SemiBold.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'titillium';
+	src: asset-url('TitilliumWeb-Regular.woff2') format('woff2'), 
+	asset-url('TitilliumWeb-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'titillium';
+	src: asset-url('TitilliumWeb-Light.woff2') format('woff2'), 
+	asset-url('TitilliumWeb-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'titillium';
+	src: asset-url('TitilliumWeb-ExtraLight.woff2') format('woff2'),
+	  asset-url('TitilliumWeb-ExtraLight.woff') format('woff');
+	font-weight: 200;
+	font-style: normal;
+	font-display: swap;
+}
+/* shiporacle icons */
+@font-face {
+	font-family: 'shiporacle';
+	src: asset-url('spo/shiporacle.eot?sny6xp');
+	src: asset-url('spo/shiporacle.eot?sny6xp#iefix') format('embedded-opentype'),
+	asset-url('spo/shiporacle.ttf?sny6xp') format('truetype'), 
+	asset-url('spo/shiporacle.woff?sny6xp') format('woff'), 
+	asset-url('spo/shiporacle.svg?sny6xp#shiporacle') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+[class^="spo-icon-"], [class*=" spo-icon-"] {
+  font-family: 'shiporacle' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.spo-icon-balance:before {
+  content: "\e91c";
+}
+.spo-icon-lightning-charge-fill:before {
+  content: "\e91d";
+}
+.spo-icon-globe:before {
+  content: "\e91e";
+}
+.spo-icon-thumbs-up-fill:before {
+  content: "\e91a";
+}
+.spo-icon-thumbs-up:before {
+  content: "\e91b";
+}
+.spo-icon-play-btn:before {
+  content: "\e918";
+}
+.spo-icon-image:before {
+  content: "\e919";
+}
+.spo-icon-person-plus:before {
+  content: "\e915";
+}
+.spo-icon-person-dash:before {
+  content: "\e916";
+}
+.spo-icon-person-x:before {
+  content: "\e917";
+}
+.spo-icon-envelope-fill:before {
+  content: "\e913";
+}
+.spo-icon-chat-dots-fill:before {
+  content: "\e914";
+}
+.spo-icon-camera:before {
+  content: "\e912";
+}
+.spo-icon-pencil-square:before {
+  content: "\e911";
+}
+.spo-icon-bell-fill:before {
+  content: "\e910";
+}
+.spo-icon-chevron-up:before {
+  content: "\e90c";
+}
+.spo-icon-chevron-right:before {
+  content: "\e90d";
+}
+.spo-icon-chevron-left:before {
+  content: "\e90e";
+}
+.spo-icon-chevron-down:before {
+  content: "\e90f";
+}
+.spo-icon-x:before {
+  content: "\e90a";
+}
+.spo-icon-check:before {
+  content: "\e90b";
+}
+.spo-icon-fill-upload-blank:before {
+  content: "\e908";
+}
+.spo-icon-fill-upload:before {
+  content: "\e909";
+}
+.spo-icon-exclamation-circle-fill:before {
+  content: "\e904";
+}
+.spo-icon-telephone-fill:before {
+  content: "\e905";
+}
+.spo-icon-person-circle:before {
+  content: "\e906";
+}
+.spo-icon-geo-alt-fill:before {
+  content: "\e907";
+}
+.spo-icon-plus:before {
+  content: "\e903";
+}
+.spo-icon-instagram:before {
+  content: "\e900";
+}
+.spo-icon-facebook:before {
+  content: "\e901";
+}
+.spo-icon-search:before {
+  content: "\e902";
+}
